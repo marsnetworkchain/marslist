@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Telegram Mini App Boyutlandırması */
+.contact-container {
+  width: 360px; /* 9:16 formatında genişlik */
+  height: 640px; /* 9:16 formatında yükseklik */
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  justify-content: space-between; /* Üst ve altı ayrı tut */
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 80px;
+  height: 4px;
+  background-color: #6a11cb;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.contact-inputs {
+  width: 100%; /* Tam genişlik */
+  height: 50px;
+  padding-left: 15px;
+  font-weight: 500;
+  color: #333;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 10px;
+}
+
+.contact-inputs:focus {
+  border: 2px solid #6a11cb;
+}
+
+textarea.contact-inputs {
+  height: 100px;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+.contact-left button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 12px;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(270deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-left button img {
+  height: 12px;
+}
+
+.contact-right {
+  display: none; /* Telegram Mini App'de sağ taraf gizli */
+}
+
+/* Alt Kısım (Footer) */
+.contact-footer {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6a11cb;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 360px) {
+  .contact-container {
+      width: 100%;
+      height: auto;
+  }
+}
